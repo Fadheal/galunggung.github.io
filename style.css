@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html {
+  background-color: rgb(207, 240, 157);
+}
+
+hr {
+  width: 0;
+}
+
+li a {
+    font-family: 'Poppins', sans-serif;
+}
+
+li a:hover {
+    background-color: rgb(157, 250, 157);
+    color: white;
+    border-radius: 5px;
+}
+
+.fill {
+    background-color: rgb(207, 240, 157);
+    height: 20px;
+    width: auto;
+}
+
+.fil {
+    opacity: 0;
+    height: 50px;
+    width: auto;
+}
+
+.slogan {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.atas {
+    height: 150px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/hutan.jpg");
+    width: auto;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DDFFBB;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+.card {
+  width: 360px;
+  margin: auto;
+}
+
+.section1 {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 20px;
+}
+
+.section1{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.motivation {
+  background-color: rgb(207, 240, 157);
+  display: flex;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img/hutan2.jpg");
+
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.caption span.border {
+  background-color: #353535;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.caption {
+  width: 100%;
+  text-align: center;
+  color: white;
+} 
+
+@media (max-width: 1325px) {
+  html {
+    background-color: rgb(207, 240, 157);
+  }
+  .slogan {
+      font-size: 20px;
+      left: 800px;
+  }
+  .motivation {
+    background-color: rgb(207, 240, 157);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    height: 150px;
+    width: 360px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    background-color: rgb(207, 240, 157);
+    width: 390px;
+  }
+  .slogan {
+      font-size: 20px;
+      left: 800px;
+  }
+  .motivation {
+    background-color: rgb(207, 240, 157);
+    display: inline-block;
+  }
+  .card {
+    height: 150px;
+    width: 360px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
